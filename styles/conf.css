@@ -1,0 +1,296 @@
+/**********************************************************************/
+/**********************************************************************/
+.conf__nav {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.conf__date {
+	width: 45px;
+	margin-right: 40px;
+	margin-bottom: 20px;
+}
+.conf__date p {
+	font-family: "BrutalType", sans-serif;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 100%;
+	color: rgba(19, 21, 26, 0.7);
+	text-align: center;
+}
+.conf__date p:last-child {
+	font-size: 14px;
+}
+.conf__icons {
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+.conf__icons .icons-list__item {
+	margin-bottom: 10px;
+	padding-left: 30px; 
+}
+.conf__icons .icons-list__item img {
+	max-width: 20px;
+	max-height: 20px;
+}
+.conf__icons .icons-list__item p {
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(19, 21, 26, 0.7);
+}
+.conf__icons .icons-list__item p a {
+	margin-left: 20px;
+	font-family: "NoahText", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #447186;
+	text-decoration: underline;
+	transition: opacity 0.3s;
+}
+.conf__icons .icons-list__item p a:hover {
+	opacity: 0.6;
+}
+
+/**********************************************************************/
+.conf__btns {
+	display: flex;
+	margin-left: auto;
+	margin-bottom: auto;
+	padding-bottom: 20px;
+}
+.conf__btns_btm {
+	margin-top: 30px;
+}
+.conf__btns .btn {
+	margin-left: 30px;
+}
+.conf__btns .btn span:nth-child(2),
+.conf__btns .btn.toggled span:nth-child(1) {
+	display: none;
+}
+.conf__btns .btn.toggled span:nth-child(2) {
+	display: block;
+}
+
+/**********************************************************************/
+.conf__meta {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 25px;
+}
+.conf__cat {
+	display: inline-block;
+	margin: 0 30px auto 0;
+	padding: 10px 20px;
+	border: 1px solid rgba(19, 21, 26, 0.4);
+	border-radius: 5px;
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 100%;
+	color: rgba(19, 21, 26, 0.8);
+	transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+.conf__cat:hover {
+	border-color: transparent;
+	background-color: rgba(19, 21, 26, 0.4);
+	color: #FFFFFF;
+}
+.conf__share {
+	margin: 0 auto auto 0;
+}
+
+/**********************************************************************/
+.conf__icon-nav {
+	margin-bottom: auto;
+	margin-left: auto;
+}
+.conf__icon-nav .conf__users-counter {
+	margin-left: 20px;
+	margin-right: 40px;
+}
+.conf__icon-nav .conf__users-counter p {
+	margin-left: 0;
+}
+.conf__icon-nav .conf__favourite img:nth-child(2),
+.conf__icon-nav .conf__favourite.on img:first-child {
+	display: none;
+}
+.conf__icon-nav .conf__favourite.on img:nth-child(2) {
+	display: block;
+}
+
+/**********************************************************************/
+.conf__speakers {
+	margin-bottom: 60px;
+}
+.conf__speakers .speakers__slider {
+	margin-top: 20px;
+}
+.conf__speakers .speaker {
+	display: flex;
+	flex-direction: column;
+	transition: opacity 0.3s;
+}
+.conf__speakers .speaker:hover {
+	opacity: 0.6;
+}
+.conf__speakers .speaker__img {
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 8px;
+}
+.conf__speakers .speaker__name {
+	margin: 25px 0 40px;
+}
+.conf__speakers .speaker__name p {
+	font-family: "BrutalType", sans-serif;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 32px;
+	color: #13151A;
+	text-align: center;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.conf__date {
+		margin-right: 30px;
+	}
+
+	/******************************************************************/
+	.conf__btns:not(.conf__btns_btm) {
+		flex-direction: column;
+	}
+	.conf__btns:not(.conf__btns_btm) .btn {
+		margin-bottom: 10px;
+	}
+	.conf__btns:not(.conf__btns_btm) .btn:last-child {
+		margin-bottom: 0;
+	}
+
+	/******************************************************************/
+	.conf__cat {
+		margin-right: 20px;
+	}
+
+	/******************************************************************/
+	.conf__icon-nav .conf__users-counter {
+		margin-right: 30px;
+	}
+
+	/******************************************************************/
+	.conf__speakers .speaker__name p {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+	
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-conf__content {
+		padding-bottom: 0;
+	}
+	
+	
+	/******************************************************************/
+	/******************************************************************/
+	.conf__date {
+		width: 40px;
+		margin-right: 10px;
+	}
+	.conf__date p {
+		font-size: 28px;
+	}
+	.conf__icons {
+		width: calc(100% - 50px);
+		margin-bottom: 20px;
+	}
+	.conf__icons .icons-list__item {
+		margin-bottom: 5px;
+	}
+	.conf__icons .icons-list__item p {
+		font-size: 14px;
+	}
+	.conf__icons .icons-list__item p a {
+		margin-left: 10px;
+		font-size: 14px;
+	}
+
+	/******************************************************************/
+	.conf__btns {
+		width: 100%;
+		flex-direction: column;
+		margin: 0;
+		padding-bottom: 0;
+	}
+	.conf__btns_btm {
+		padding-top: 20px;
+	}
+	.conf__btns .btn {
+		min-width: 260px;
+		max-width: 100%;
+		margin: 0 auto 10px;
+	}
+	.conf__btns .btn:last-child {
+		margin-bottom: 0;
+	}
+
+	/******************************************************************/
+	.conf__meta {
+		margin-bottom: 20px;
+	}
+	.conf__share {
+		margin: 0 0 0 auto;
+	}
+	
+	/******************************************************************/
+	.conf__icon-nav {
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+	.conf__icon-nav .conf__users-counter {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	/******************************************************************/
+	.conf__speakers {
+		margin-bottom: 40px;
+	}
+	.conf__speakers .speakers__slider {
+		margin-top: 0;
+	}
+	.conf__speakers .speaker__name {
+		margin: 10px 0 15px;
+	}
+	.conf__speakers .speaker__name p {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+	
+@media screen and (max-width: 450px) {
+	/******************************************************************/
+	/******************************************************************/
+	.conf__share {
+		width: 100%;
+	}
+	
+	/******************************************************************/
+	.conf__icon-nav {
+		justify-content: flex-start;
+	}
+	.conf__icon-nav .conf__users-counter {
+		width: 100%;
+		min-height: 40px;
+	}
+}

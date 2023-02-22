@@ -1,0 +1,805 @@
+/**********************************************************************/
+/**********************************************************************/
+.formarea form {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea *[hidden], .formarea .hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea input, .formarea textarea {
+	padding: 0;
+	outline: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__subtitle {
+	margin-bottom: 15px;
+	font-family: "BrutalType", sans-serif;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 110%;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__divider {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__line  {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__line label {
+	display: block;
+	margin-bottom: 5px;
+	font-family: "NoahText", sans-serif;
+	font-size: 16px;
+	line-height: 120%;
+	color: #AAAAAA;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__line input, .formarea__line textarea {
+	display: block;
+	width: 100%;
+	padding: 17px 15px;
+	border: 1px solid #E1ECFF;
+	border-radius: 4px;
+	background-color: #E1ECFF;
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(19, 21, 26);
+	transition: border-color 0.3s, color 0.3s;
+}
+.formarea__line input:placeholder, .formarea__line textarea:placeholder {
+	color: rgba(19, 21, 26, 0.5);
+}
+.formarea__line input.error, .formarea__line textarea.error {
+	border-color: #F5362D;
+}
+.formarea__line textarea {
+	height: 110px;
+	resize: none;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__pass {
+	position: relative;
+}
+.formarea__pass .formarea__input {
+	padding-right: 60px;
+}
+.formarea__pass-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	transition: opacity 0.3s;
+}
+.formarea__pass-icon:hover {
+	opacity: 0.6;
+}
+.formarea__pass-icon img {
+	width: 24px;
+	margin: auto;
+}
+.formarea__pass-icon img.on,
+.formarea__pass.show .formarea__pass-icon img.off {
+	display: none;
+}
+.formarea__pass.show .formarea__pass-icon img.on {
+	display: block;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__submit input {
+	position: relative;
+	display: block;
+	max-width: calc(100% - 4px);
+	margin: 2px;
+	padding: 10px 40px;
+	border: none;
+	border-radius: 6px;
+	background-color: #1D2129;
+	font-family: "KB Astrolyte", sans-serif;
+	font-size: 20px;
+	line-height: 150%;
+	letter-spacing: 0.04em;
+	color: #FFFFFF;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+.formarea__submit:hover input {
+	background-color: #000000;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__check {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    font-family: "NoahText", sans-serif;
+	font-size: 16px !important;
+	line-height: 20px;
+	color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.formarea__check input {
+	width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+}
+.formarea__check span {
+	position: absolute;
+    top: 0;
+	left: 0;
+    width: 20px;
+    height: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 2px;
+	background-color: #17191F;
+    transition: border-color 0.3s;
+}
+.formarea__check input:checked + span, .formarea__check:hover span {
+	border-color: #C6FFFE;
+}
+.formarea__check span img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    width: 12px;
+	opacity: 0;
+	pointer-events: none;
+    transition: opacity 0.3s;
+}
+.formarea__check input:checked + span img {
+	opacity: 1;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__select {
+    position: relative;
+	width: 100%;
+	transition: opacity 0.3s;
+}
+.formarea__select select {
+    position: absolute;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    pointer-events: none;
+}
+.formarea__select .select__selected {
+	position: relative;
+	width: 100%;
+	padding: 17px 60px 17px 15px;
+	border: 1px solid #E1ECFF;
+	border-radius: 4px;
+	background-color: #E1ECFF;
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(19, 21, 26);
+	overflow: hidden;
+    white-space: nowrap;
+	transition: border-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+.formarea__select.open .select__selected {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.formarea__select .select__selected:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 60px;
+	background-color: #E1ECFF;
+}
+.formarea__select .select__selected:after {
+    content: "";
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translate(-50%, -50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 5px 0 5px;
+	border-color: #13151A transparent transparent transparent;
+}
+.formarea__select .select__items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+	max-height: 200px;
+	border-top: 1px solid #13151A;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+    background-color: #E1ECFF;
+	box-shadow: 0 3px 3px rgb(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 20;
+}
+.formarea__select .select__items::-webkit-scrollbar-track {
+	background: #CED7E5;
+}
+.formarea__select .select__items::-webkit-scrollbar-thumb {
+	background: linear-gradient(200deg, #1C1F26 0%, #252933 60%);
+}
+.formarea__select .select__item {
+	padding: 17px 15px;
+	border-top: 1px solid #13151A;
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(19, 21, 26);
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+.formarea__select .select__item:first-child,
+.formarea__select .select__item:first-child.same + .select__item {
+	border-top: none;
+}
+.formarea__select .select__item.same {
+	display: none;
+}
+.formarea__select .select__item:hover {
+    background-color: #CED7E5;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__tags {
+	position: relative;
+}
+.formarea__tags input {
+	padding-right: 60px;
+	transition: opacity 0.3s;
+}
+.formarea__tags input.disabled {
+	opacity: 0.6;
+}
+.formarea__tags input + img {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	transform: translateY(-50%);
+	width: 24px;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.formarea__tags input + img:hover {
+	opacity: 0.6;
+}
+.formarea__tags .tags__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.formarea__tags .tags__list-item {
+	display: flex;
+	max-width: 100%;
+	margin: auto 5px 5px 0;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: #CED7E5;
+}
+.formarea__tags .tags__list-item:first-child {
+	margin-top: 10px;
+}
+.formarea__tags .tags__list-item p {
+	font-family: "NoahText", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #13151A;
+	text-align: center;
+	word-break: break-word;
+}
+.formarea__tags .tags__list-item span {
+	display: flex;
+	flex-direction: column;
+	width: 20px;
+	height: 20px;
+	margin: auto 0;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.formarea__tags .tags__list-item span:hover {
+	opacity: 0.6;
+}
+.formarea__tags .tags__list-item span img {
+	width: 10px;
+	margin: auto;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__date {
+	position: relative;
+}
+.formarea__date input {
+	padding-right: 60px;
+	overflow: hidden;
+    white-space: nowrap;
+}
+.formarea__date input:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 60px;
+	background-color: #E1ECFF;
+}
+.formarea__date img {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	transform: translateY(-50%);
+	width: 20px;
+}
+
+/**********************************************************************/
+.ui-datepicker {
+	width: 280px;
+	padding: 5px;
+	border: 1px solid #E1ECFF !important;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(19, 21, 26);
+	z-index: 950 !important;
+}
+.ui-datepicker-header {
+	display: flex;
+	padding: 0 !important;
+	border: 1px solid #E1ECFF !important;
+	border-radius: 4px;
+	background-color: #E1ECFF;
+}
+.ui-datepicker-title {
+	width: calc(100% - 80px);
+	margin: 0 auto !important;
+	font-weight: 600;
+	line-height: 40px !important;
+	text-align: center !important;
+	order: 2;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+	position: relative !important;
+	top: 0 !important;
+	width: 40px !important;
+	height: 40px !important;
+	border: none !important;
+	background-color: transparent !important;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+	opacity: 0.6;
+}
+.ui-datepicker-prev {
+	left: 0 !important;
+	order: 1;
+}
+.ui-datepicker-next {
+	right: 0 !important;
+	order: 3;
+}
+.ui-datepicker-prev:before, .ui-datepicker-next:before {
+	content: "";
+    position: absolute;
+	left: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.ui-datepicker-prev:before {
+	border-width: 5px 8px 5px 0;
+    border-color: transparent #13151A transparent transparent;
+}
+.ui-datepicker-next:before {
+    border-width: 5px 0 5px 8px;
+    border-color: transparent transparent transparent #13151A;
+}
+.ui-datepicker-prev span, .ui-datepicker-next span {
+	display: none !important;
+}
+.ui-datepicker-calendar {
+	margin: 0 !important;
+}
+.ui-datepicker .th {
+	padding: 5px !important;
+    font-weight: 600 !important;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+	padding: 3px !important;
+	border: 1px solid rgba(19, 21, 26, 0.5) !important;
+	border-radius: 3px;
+	color: rgba(19, 21, 26) !important;
+	text-align: center;
+}
+.ui-datepicker td .ui-state-highlight {
+	background-color: rgba(102, 221, 219, 0.5) !important;
+}
+.ui-datepicker td .ui-state-active {
+	background-color: #636DCF !important;
+	font-weight: 600;
+	color: #FFFFFF !important;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__time {
+	position: relative;
+}
+.formarea__time input {
+	padding-right: 60px;
+	overflow: hidden;
+    white-space: nowrap;
+}
+.formarea__time input:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 60px;
+	background-color: #E1ECFF;
+}
+.formarea__time img {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	transform: translateY(-50%);
+	width: 20px;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__link {
+	display: inline;
+	font-family: "NoahText", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration: underline;
+	color: #65DDDB;
+	transition: opacity 0.3s;
+}
+.formarea__link:hover {
+	opacity: 0.6;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea label.error {
+	margin: 5px 0 0;
+	color: #F5362D;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__error {
+	display: none;
+	margin-top: 15px;
+    font-family: "NoahText", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+	color: #F5362D;
+	text-align: center;
+}
+.formarea__error.show {
+	display: block;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.formarea__note {
+	display: flex;
+	flex-direction: column;
+	margin: 15px auto 0;
+}
+.formarea__note p, .formarea__note a {
+	margin: 0 auto;
+	font-family: "NoahText", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(255, 255, 255, 0.7);
+}
+.formarea__note a {
+	transition: opacity 0.3s;
+}
+.formarea__note a:hover {
+	opacity: 0.6;
+}
+.formarea__note p, .formarea__note.active a {
+	display: none;
+}
+.formarea__note.active p {
+	display: block;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__subtitle {
+		font-size: 24px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__line  {
+		margin-bottom: 20px;
+	}
+	
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__line label {
+		font-size: 14px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__line input, .formarea__line textarea {
+		padding: 12px 10px;
+		font-size: 16px;
+	}
+
+
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__pass .formarea__input {
+		padding-right: 50px;
+	}
+	
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__pass-icon {
+		width: 50px;
+		height: 50px;
+	}
+	.formarea__pass-icon img {
+		width: 20px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__submit input {
+		max-width: calc(100% - 2px);
+		margin: 1px;
+		padding: 10px 30px;
+		font-size: 18px;
+		letter-spacing: 0;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__select .select__selected {
+		padding: 12px 45px 12px 10px;
+		font-size: 16px;
+	}
+	.formarea__select .select__selected:before {
+		width: 45px;
+	}
+	.formarea__select .select__selected:after {
+		right: 15px;
+	}
+	.formarea__select .select__item {
+		padding: 12px 10px;
+		font-size: 16px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__tags input {
+		padding-right: 45px;
+	}
+	.formarea__tags input + img {
+		top: 25px;
+		right: 15px;
+	}
+	.formarea__tags .tags__list-item p {
+		font-size: 14px;
+	}
+	
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__date input {
+		padding-right: 40px;
+	}
+	.formarea__date input:before {
+		width: 40px;
+	}
+	.formarea__date img {
+		top: 25px;
+		right: 10px;
+	}
+	
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__time input {
+		padding-right: 40px;
+	}
+	.formarea__time input:before {
+		width: 40px;
+	}
+	.formarea__time img {
+		top: 25px;
+		right: 10px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__error {
+		font-size: 14px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__note p, .formarea__note a {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__subtitle {
+		font-size: 18px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__line  {
+		margin-bottom: 15px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__line input, .formarea__line textarea {
+		padding: 10px;
+		line-height: 20px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__pass .formarea__input {
+		padding-right: 40px;
+	}
+	.formarea__pass-icon {
+		width: 40px;
+		height: 44px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__submit input {
+		padding: 10px 20px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__select .select__selected {
+		padding: 10px 45px 10px 10px;
+		line-height: 20px;
+	}
+	.formarea__select .select__item {
+		padding: 10px;
+		line-height: 20px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__tags input {
+		padding: 10px 45px 10px 10px;
+	}
+	.formarea__tags input + img {
+		top: 21px;
+	}
+	
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__date img {
+		top: 21px;
+	}
+	
+	
+	/******************************************************************/
+	/******************************************************************/
+	.formarea__time img {
+		top: 21px;
+	}
+}

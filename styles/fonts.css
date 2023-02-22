@@ -1,0 +1,223 @@
+/**********************************************************************/
+/*********************         BRUTALTYPE         *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "BrutalType";
+    src: url(../fonts/BrutalType-ExtraLight.otf) format("opentype");
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "BrutalType";
+    src: url(../fonts/BrutalType-Light.otf) format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "BrutalType";
+    src: url(../fonts/BrutalType.otf) format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "BrutalType";
+    src: url(../fonts/BrutalType-Medium.otf) format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "BrutalType";
+    src: url(../fonts/BrutalType-Bold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "BrutalType";
+    src: url(../fonts/BrutalType-ExtraBold.otf) format("opentype");
+	font-weight: 800;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************            NOAH            *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "Noah";
+    src: url(../fonts/Noah-Regular.otf) format("opentype"),
+		 url(../fonts/Noah-Regular.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "Noah";
+    src: url(../fonts/Noah-RegularItalic.otf) format("opentype"),
+		 url(../fonts/Noah-RegularItalic.ttf) format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face { 
+	font-family: "Noah";
+    src: url(../fonts/Noah-Bold.otf) format("opentype"),
+		 url(../fonts/Noah-Bold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "Noah";
+    src: url(../fonts/Noah-BoldItalic.otf) format("opentype"),
+		 url(../fonts/Noah-BoldItalic.ttf) format("truetype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+
+
+/**********************************************************************/
+/*********************          NOAHTEXT          *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "NoahText";
+    src: url(../fonts/NoahText-Regular.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "NoahText";
+    src: url(../fonts/NoahText-Medium.ttf) format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "NoahText";
+    src: url(../fonts/NoahText-Bold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************        NEAU MACHINA        *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "NeueMachina";
+    src: url(../fonts/NeueMachina-Light.otf) format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "NeueMachina";
+    src: url(../fonts/NeueMachina-Regular.otf) format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "NeueMachina";
+    src: url(../fonts/NeueMachina-Medium.ttf) format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "NeueMachina";
+    src: url(../fonts/NeueMachina-Ultrabold.otf) format("opentype");
+	font-weight: 800;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************         GOTHAM PRO         *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "GothamPro";
+    src: url(../fonts/GothamPro-Medium.ttf) format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "GothamPro";
+    src: url(../fonts/GothamPro-Bold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************           PANTON           *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "Panton";
+    src: url(../fonts/Panton-Regular.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "Panton";
+    src: url(../fonts/Panton-RegularItalic.ttf) format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face { 
+	font-family: "Panton";
+    src: url(../fonts/Panton-SemiBold.ttf) format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face { 
+	font-family: "Panton";
+    src: url(../fonts/Panton-Bold.ttf) format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************          MIRATRIX          *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "Miratrix";
+    src: url(../fonts/Miratrix-Normal.otf) format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************        KB ASTROLYTE        *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "KB Astrolyte";
+    src: url(../fonts/KB-Astrolyte.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************           MATRIX           *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "Matrix";
+    src: url(../fonts/Matrix-Normal.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+/**********************************************************************/
+/*********************        PROXIMA NOVA        *********************/
+/**********************************************************************/
+@font-face { 
+	font-family: "ProximaNova";
+    src: url(../fonts/ProximaNova-Semibold.ttf) format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}

@@ -1,0 +1,196 @@
+/**********************************************************************/
+/**********************************************************************/
+.editor {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+/**********************************************************************/
+.editor__block {
+	margin-bottom: 35px;
+}
+.editor__block:last-child {
+	margin-bottom: 0 !important;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.editor__img {
+	display: flex;
+	flex-direction: column;
+}
+.editor__img img {
+	margin: 0 auto;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.editor__h2 h2 {
+	font-family: "BrutalType", sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 30px;
+	color: rgba(19, 21, 26, 0.8);
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.editor__txt {
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(19, 21, 26, 0.8);
+}
+.editor__txt a {
+	font-weight: 700;
+	color: #447186;
+	text-decoration: underline;
+	transition: opacity 0.3s;
+}
+.editor__txt a:hover {
+	opacity: 0.6;
+}
+.editor__txt strong {
+	font-weight: 700;
+	color: #000000;
+}
+.editor__txt ul {
+	list-style: none;
+	padding: 0;
+}
+.editor__txt ul li {
+	position: relative;
+	padding-left: 30px;
+	padding-bottom: 15px;
+}
+.editor__txt ul li:last-child {
+	padding-bottom: 0;
+}
+.editor__txt ul li:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 9px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #767676;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.editor__iframe {
+	display: flex;
+	flex-direction: column;
+}
+.editor__iframe iframe {
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/**********************************************************************/
+/**********************************************************************/
+.editor__link {
+	display: flex;
+	flex-direction: column;
+}
+.editor__link .editor-link__title {
+	margin-bottom: 5px;
+	font-family: "NoahText", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(19, 21, 26, 0.7);
+}
+.editor__link .editor-link__holder {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #E2E3F2;
+	border-radius: 4px;
+	padding: 19px 14px;
+	background-color: #ECEEF3;
+	overflow: hidden;
+}
+.editor__link .editor-link__holder a {
+	margin-right: auto;
+	font-family: "NoahText", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	color: #13151A;
+	transition: opacity 0.3s;
+}
+.editor__link .editor-link__holder a:hover {
+	opacity: 0.6;
+}
+
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.editor {
+		margin-bottom: 30px;
+	}
+
+	/******************************************************************/
+	.editor__block {
+		margin-bottom: 20px;
+	}
+
+	
+	/******************************************************************/
+	/******************************************************************/
+	.editor__img {
+		width: calc(100% + 40px);
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	
+
+	/******************************************************************/
+	/******************************************************************/
+	.editor__h2 h2 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+
+	/******************************************************************/
+	/******************************************************************/
+	.editor__txt {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.editor__txt ul li {
+		padding-left: 20px;
+	}
+	.editor__txt ul li:before {
+		top: 7px;
+	}
+
+
+	/******************************************************************/
+	/******************************************************************/
+	.editor__link .editor-link__title {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.editor__link .editor-link__holder {
+		padding: 9px 14px;
+	}
+	.editor__link .editor-link__holder a {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

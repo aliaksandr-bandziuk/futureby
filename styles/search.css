@@ -1,0 +1,169 @@
+/**********************************************************************/
+/**********************************************************************/
+.popup-search {
+	top: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1440px;
+	height: calc(100vh - 60px);
+	max-height: initial !important;
+	padding: 60px 30px 0 60px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+body.admin-bar .popup-search {
+	top: calc(60px + 32px);
+	height: calc(100vh - 92px);
+}
+
+/**********************************************************************/
+.popup-search__content {
+	height: 100%;
+}
+.popup-search .search-formarea {
+	display: flex;
+	justify-content: space-between;
+	width: 1140px;
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+.popup-search .search-formarea form {
+	width: calc(100% - 65px);
+}
+.popup-search .search-formarea__close {
+	display: flex;
+	flex-direction: column;
+	width: 40px;
+	height: 40px;
+	margin: 10px 0 auto auto;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.popup-search .search-formarea__close:hover {
+	opacity: 0.6;
+}
+.popup-search .search-formarea__close img {
+	width: 24px;
+	margin: auto;
+}
+.popup-search .search-formarea .formarea__line {
+	margin-bottom: 0 !important;
+}
+.popup-search .search-formarea .formarea__line input {
+	padding-left: 70px;
+}
+.popup-search .search-formarea__submit {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	display: flex;
+	flex-direction: column;
+	width: 40px;
+	height: 40px;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.popup-search .search-formarea__submit:hover {
+	opacity: 0.6;
+}
+.popup-search .search-formarea__submit img {
+	width: 30px;
+	margin: auto;
+}
+
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.popup-search {
+		top: 40px;
+		width: 1200px;
+		height: calc(100vh - 40px);
+		padding: 50px 15px 0 30px;
+	}
+	body.admin-bar .popup-search {
+		top: calc(40px + 32px);
+		height: calc(100vh - 72px);
+	}
+	
+	/******************************************************************/
+	.popup-search .search-formarea {
+		margin-bottom: 30px;
+	}
+	.popup-search .search-formarea form {
+		width: calc(100% - 60px);
+	}
+	.popup-search .search-formarea__close {
+		width: 30px;
+		height: 30px;
+	}
+	.popup-search .search-formarea .formarea__line input {
+		padding-left: 50px;
+	}
+	.popup-search .search-formarea__submit {
+		top: 5px;
+		left: 10px;
+	}
+	.popup-search .search-formarea__submit img {
+		width: 24px;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	/******************************************************************/
+	/******************************************************************/
+	body.admin-bar .popup-search {
+		top: calc(40px + 46px);
+		height: calc(100vh - 86px);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.popup-search {
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		max-width: 100%;
+		padding: 20px 10px 0 20px;
+	}
+	body.admin-bar .popup-search {
+		top: 46px;
+		height: calc(100vh - 46px);
+	}
+	
+	/******************************************************************/
+	.popup-search__content {
+		padding-right: 10px;
+	}
+	.popup-search .search-formarea {
+		width: 300px;
+		margin-bottom: 15px;
+	}
+	.popup-search .search-formarea form {
+		width: calc(100% - 50px);
+	}
+	.popup-search .search-formarea__close {
+		margin-top: 6px;
+	}
+	.popup-search .search-formarea .formarea__line input {
+		padding-left: 50px;
+	}
+	.popup-search .search-formarea__submit {
+		top: 6px;
+		width: 30px;
+		height: 30px;
+	}
+	.popup-search .grid__nav {
+		margin-bottom: 30px;
+	}
+	.popup-search .grid__filter-wrap {
+		margin-left: 0
+	}
+}

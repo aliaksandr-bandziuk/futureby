@@ -1,0 +1,45 @@
+/**********************************************************************/
+/*********************         AD  BANNER         *********************/
+/**********************************************************************/
+.adbanner {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.adbanner-mob {
+	display: none;
+}
+.adbanner__content {
+	margin-left: auto;
+	margin-right: auto;
+}
+a.adbanner__content {
+	cursor: pointer;
+	transition: opacity 0.3s;
+}
+a.adbanner__content:hover {
+	opacity: 0.6;
+}
+.adbanner__content img {
+	margin: 0 auto;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.adbanner {
+		display: none;
+	}
+	.adbanner-mob {
+		display: flex;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}

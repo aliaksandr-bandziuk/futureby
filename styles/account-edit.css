@@ -1,0 +1,141 @@
+/**********************************************************************/
+/**********************************************************************/
+.page-account-edit__content {
+	width: 650px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**********************************************************************/
+.page-account-edit__title {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 35px;
+	padding-right: 25px;
+	font-weight: 400;
+	font-family: "KB Astrolyte", sans-serif;
+	font-size: 40px;
+	line-height: 100%;
+	color: #FFFFFF;
+}
+.page-account-edit__title:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	background-image: url(../../img/icons/title-icon.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/**********************************************************************/
+.page-account-edit .edit-photo {
+	display: flex;
+	margin-bottom: 50px;
+}
+.page-account-edit .edit-photo__img {
+	width: 140px;
+	height: 140px;
+	margin-bottom: auto;
+	border-radius: 10px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	transition: opacity 0.3s;
+}
+.page-account-edit .edit-photo__img:hover {
+	opacity: 0.6;
+}
+.page-account-edit .edit-photo__content {
+	width: calc(100% - 140px);
+	padding-left: 35px;
+}
+.page-account-edit .edit-photo__content .btn {
+	margin-bottom: 10px;
+}
+.edit-photo__error {
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 130%;
+	color: #B6261F;
+}
+.page-account-edit .edit-photo__rules {
+	padding-top: 5px;
+}
+.page-account-edit .edit-photo__rules p {
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 130%;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-account-edit__content {
+		width: 580px;
+	}
+
+	/******************************************************************/
+	.page-account-edit__title {
+		margin-bottom: 25px;
+		padding-right: 20px;
+		font-size: 35px;
+	}
+	.page-account-edit__title:after {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-account-edit__content {
+		width: 450px;
+	}
+	
+	/******************************************************************/
+	.page-account-edit__title {
+		padding-right: 15px;
+		font-size: 32px;
+	}
+	.page-account-edit__title:after {
+		width: 12px;
+		height: 12px;
+	}
+
+	/******************************************************************/
+	.page-account-edit .edit-photo {
+		margin-bottom: 25px;
+	}
+	.page-account-edit .edit-photo__img {
+		width: 80px;
+		height: 80px;
+	}
+	.page-account-edit .edit-photo__content {
+		width: calc(100% - 80px);
+		padding-left: 15px;
+	}
+	.page-account-edit .edit-photo__content .btn {
+		margin-bottom: 5px;
+	}
+	.edit-photo__error {
+		font-size: 14px;
+		line-height: 120%;
+	}
+	.page-account-edit .edit-photo__rules p {
+		font-size: 14px;
+		line-height: 120%;
+	}
+}

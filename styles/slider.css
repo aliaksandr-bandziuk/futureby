@@ -1,0 +1,125 @@
+/**********************************************************************/
+/*********************           SLIDER           *********************/
+/**********************************************************************/
+.slider {
+	display: flex;
+	flex-direction: column;
+}
+
+/**********************************************************************/
+.slider__items {
+	width: calc(100% + 20px);
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.slider__items .slick-track {
+	min-width: 100%;
+}
+.slider__item {
+	margin: 0 10px;
+}
+
+/**********************************************************************/
+.slider__nav {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 40px;
+	margin: 0 auto;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.slider__nav.desktop-hide {
+	display: none;
+}
+
+/**********************************************************************/
+.slider__nav .slider__arr {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	width: 40px;
+	height: 40px;
+	transition: opacity 0.3s;
+	cursor: pointer;
+}
+.slider__nav .slider__arr_l {
+	left: 0;
+}
+.slider__nav .slider__arr_r {
+	right: 0;
+}
+.slider__nav .slider__arr:hover {
+	opacity: 0.6;
+}
+.slider__nav .slider__arr img {
+	width: 20px;
+	margin: auto;
+}
+
+/**********************************************************************/
+.slider__nav .slick-dots {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto 20px;
+	padding: 0;
+	list-style: none;
+}
+.slider__nav .slick-dots li {
+	width: 12px;
+	height: 12px;
+	margin: 5px;
+	border: 1px solid #263238;
+	border-radius: 50%;
+	transition: background-color 0.3s;
+}
+.slider__nav .slick-dots li.slick-active, .slider__nav .slick-dots li:hover {
+	background-color: #263238;
+}
+.slider__nav .slick-dots li button {
+	display: none;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.slider__items {
+		width: calc(100% + 10px);
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.slider__item {
+		margin: 0 5px;
+	}
+	
+	/******************************************************************/
+	.slider__nav {
+		min-height: 30px;
+		padding: 0;
+	}
+	.slider__nav.desktop-hide {
+		display: flex;
+	}
+	.slider__nav.mobile-hide {
+		display: none;
+	}
+
+	/******************************************************************/
+	.slider__nav .slider__arr {
+		display: none !important;
+	}
+
+	/******************************************************************/
+	.slider__nav .slick-dots {
+		margin: auto 0;
+	}
+}

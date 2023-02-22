@@ -1,0 +1,57 @@
+/**********************************************************************/
+/*********************         ICON  LIST         *********************/
+/**********************************************************************/
+.icons-list {
+	display: flex;
+	flex-direction: column;
+}
+.icons-list__item {
+	position: relative;
+	margin-bottom: 15px;
+	padding-left: 35px; 
+}
+.icons-list__item:last-child {
+	margin-bottom: 0 !important; 
+}
+.icons-list__item img {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 22px;
+	max-height: 22px;
+}
+.icons-list__item p {
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFFFFF;
+}
+a.icons-list__item p {
+	transition: opacity 0.3s;
+}
+a.icons-list__item:hover p {
+	opacity: 0.6;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.icons-list__item {
+		margin-bottom: 10px;
+		padding-left: 30px; 
+	}
+	.icons-list__item img {
+		max-width: 20px;
+		max-height: 20px;
+	}
+	.icons-list__item p {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

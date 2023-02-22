@@ -1,0 +1,49 @@
+/**********************************************************************/
+/*********************          ICON NAV          *********************/
+/**********************************************************************/
+.icon-nav {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 40px;
+}
+.icon-nav__item {
+	display: flex;
+	margin: auto 20px auto 0;
+	transition: opacity 0.3s;
+}
+a.icon-nav__item {
+	padding: 5px;
+}
+.icon-nav__item:last-child {
+	margin-right: 0 !important; 
+}
+a.icon-nav__item:hover, .icon-nav__item[data-href]:hover {
+	opacity: 0.6;
+}
+.icon-nav__item img {
+	max-width: 24px;
+	max-height: 24px;
+	transition: opacity 0.3s;
+}
+.icon-nav__item p {
+	min-width: 15px;
+	margin: auto 0 auto 5px;
+	font-family: "NoahText", sans-serif;
+	font-size: 16px;
+	line-height: 100%;
+	color: rgba(19, 21, 26, 0.8);
+	text-align: center;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.icon-nav__item {
+		margin-right: 10px;
+	}
+}

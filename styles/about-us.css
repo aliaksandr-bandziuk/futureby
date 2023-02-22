@@ -1,0 +1,175 @@
+/**********************************************************************/
+/**********************************************************************/
+.page-about__title {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 80px;
+	padding-right: 50px;
+	font-weight: 400;
+	font-family: "KB Astrolyte", sans-serif;
+	font-size: 60px;
+	line-height: 100%;
+	color: #FFFFFF;
+}
+.page-about__title:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	background-image: url(../../img/icons/title-icon.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/**********************************************************************/
+.page-about__col {
+	margin-bottom: 50px;
+}
+.page-about__col:last-child {
+	margin-bottom: 0;
+}
+
+/**********************************************************************/
+.page-about__subtitle {
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-family: "BrutalType", sans-serif;
+	font-size: 28px;
+	line-height: 110%;
+	color: #FFFFFF;
+}
+
+/**********************************************************************/
+.page-about__descr p {
+	margin-bottom: 20px;
+	font-family: "NoahText", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(255, 255, 255, 0.7);
+}
+.page-about__descr p:last-child {
+	margin-bottom: 0;
+}
+
+/**********************************************************************/
+.page-about__banner {
+	width: 100%;
+	height: 485px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1550px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-about__col:first-child {
+		width: 100%;
+	}
+	.page-about__col:nth-child(2) {
+		width: 50%;
+	}
+	.page-about__col:nth-child(3) {
+		max-width: 50%;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-about__title {
+		margin-bottom: 60px;
+		padding-right: 30px;
+		font-size: 60px;
+	}
+	.page-about__title:after {
+		width: 30px;
+		height: 30px;
+	}
+
+	/******************************************************************/
+	.page-about__banner {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-about__content {
+		padding-top: 15px;
+	}
+		
+	/******************************************************************/
+	.page-about__title {
+		margin-bottom: 30px;
+		padding: 0 15px 15px 0;
+		font-size: 32px;
+	}
+	.page-about__title:after {
+		width: 12px;
+		height: 12px;
+	}
+	.page-about__title:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: -20px;
+		width: 100vw;
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+	
+	/******************************************************************/
+	.page-about__col {
+		width: 100% !important;
+		order: 3;
+	}
+	.page-about__col:first-child {
+		order: 1;
+	}
+	.page-about__col:nth-child(3) {
+		max-width: initial;
+		margin-bottom: 20px;
+	}
+	.page-about__col:last-child {
+		position: relative;
+		order: 2;
+		width: calc(100% + 40px) !important;
+		margin: -25px -20px 40px;
+		padding-bottom: 40px;
+	}
+	.page-about__col:last-child:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+
+	/******************************************************************/
+	.page-about__subtitle {
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+
+	/******************************************************************/
+	.page-about__col .btn {
+		width: 150px;
+	}
+
+	/******************************************************************/
+	.page-about__banner {
+		height: 240px;
+	}
+}

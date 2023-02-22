@@ -1,0 +1,81 @@
+/**********************************************************************/
+/*********************        THEME TOGGLE        *********************/
+/**********************************************************************/
+.theme-toggle__track {
+	position: relative;
+	display: flex;
+	width: 44px;
+	height: 28px;
+	margin: 4px 13px;
+	border-radius: 14px;
+	background-color: #464B56;
+	cursor: pointer;
+}
+.theme-toggle__btn {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 30px;
+	height: 30px;
+	margin: -1px auto;
+    transform: translateX(-10px);
+	transition: transform 0.3s;
+}
+.theme-toggle.on .theme-toggle__btn {
+    transform: translateX(10px);
+}
+.theme-toggle__btn:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: linear-gradient(90deg, #5ABBD7 0%, #4D5A9F 100% );
+	z-index: -1;
+}
+.theme-toggle__btn:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #16171D;
+}
+.theme-toggle__btn img {
+	width: 24px;
+	margin: auto;
+	z-index: 10;
+}
+
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) and (min-width: 768px) {
+	/******************************************************************/
+	/******************************************************************/
+	.theme-toggle__track {
+		width: 38px;
+		height: 24px;
+		margin-left: 12px;
+		margin-right: 12px;
+		border-radius: 12px;
+	}
+	.theme-toggle__btn {
+		width: 26px;
+		height: 26px;
+		margin: -1px auto;
+	}
+	.theme-toggle__btn img {
+		width: 20px;
+	}
+}

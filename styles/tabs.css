@@ -1,0 +1,65 @@
+/**********************************************************************/
+/*********************            TABS            *********************/
+/**********************************************************************/
+.tabs {
+	display: flex;
+	margin-bottom: 25px;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+.tabs::-webkit-scrollbar {
+	height: 1px;
+}
+.tabs__item {
+	display: flex;
+    flex-direction: column;
+	flex-grow: 1;
+    justify-content: center;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+	margin-bottom: 5px;
+	transition: border-color 0.3s;
+	cursor: pointer;
+}
+.tabs__item:hover, .tabs__item.active {
+	border-color: #65DDDB;
+}
+.tabs__item span {
+	padding: 25px 15px;
+	font-family: "KB Astrolyte", sans-serif;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	white-space: nowrap;
+	transition: color 0.3s;
+}
+.tabs__item:hover span, .tabs__item.active span {
+	color: #65DDDB;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.tabs__item span {
+		padding: 15px 10px;
+		font-size: 20px;
+		letter-spacing: 0;
+	}
+}
+	
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.tabs {
+		margin-bottom: 15px;
+	}
+	.tabs__item span {
+		font-size: 18px;
+	}
+}

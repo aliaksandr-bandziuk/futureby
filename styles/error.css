@@ -1,0 +1,199 @@
+/**********************************************************************/
+/*********************         PAGE ERROR         *********************/
+/**********************************************************************/
+.page-error {
+	display: flex;
+    flex-direction: column;
+	min-height: 100vh;
+	max-width: 100%;
+	padding: 80px;
+	margin: 0;
+	background-image: url(../../img/images/404-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+body.admin-bar .page-error {
+	min-height: calc(100vh - 32px);
+}
+
+/**********************************************************************/
+.page-error__content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	max-width: 100%;
+	margin: auto;
+	padding: 120px 60px 100px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	overflow: hidden;
+}
+.page-error__content:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(87, 87, 87, 0.2);
+	filter: blur(15px);
+}
+
+/**********************************************************************/
+.page-error__title {
+	position: relative;
+	margin: 0 auto 30px;
+	padding-right: 50px;
+	font-family: "KB Astrolyte", sans-serif;
+	font-size: 220px;
+	line-height: 100%;
+	color: #FFFFFF;
+	text-align: center;
+}
+.page-error__title:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	background-image: url(../../img/icons/title-icon.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/**********************************************************************/
+.page-error__info {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding-top: 50px;
+	width: 490px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.page-error__info:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 590px;
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.page-error__info p {
+	margin-bottom: 40px;
+	font-family: "BrutalType", sans-serif;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 110%;
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+}
+.page-error__info .btn {
+	width: 460px;
+	max-width: 100%;
+	margin: 0 auto 10px;
+}
+.page-error__info .btn:last-child {
+	margin-bottom: 0;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-error {
+		padding: 40px 60px;
+	}
+
+	/******************************************************************/
+	.page-error__content {
+		width: 600px;
+		padding: 60px 40px 50px;
+	}
+
+	/******************************************************************/
+	.page-error__title {
+		margin-bottom: 20px;
+		padding-right: 40px;
+		font-size: 180px;
+	}
+	.page-error__title:after {
+		width: 40px;
+		height: 40px;
+	}
+
+	/******************************************************************/
+	.page-error__info {
+		padding-top: 40px;
+		width: 450px;
+	}
+	.page-error__info:before {
+		width: 490px;
+	}
+	.page-error__info p {
+		margin-bottom: 30px;
+		font-size: 24px;
+	}
+	.page-error__info .btn {
+		width: 380px;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	/******************************************************************/
+	/******************************************************************/
+	body.admin-bar .page-error {
+		min-height: calc(100vh - 46px);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-error {
+		padding: 30px 20px;
+		background-image: url(../../img/images/404-bg-mob.jpg);
+		background-position: top left;
+	}
+
+	/******************************************************************/
+	.page-error__content {
+		width: 320px;
+		padding: 70px 20px 50px;
+	}
+
+	/******************************************************************/
+	.page-error__title {
+		padding-right: 15px;
+		font-size: 88px;
+	}
+	.page-error__title:after {
+		width: 12px;
+		height: 12px;
+	}
+
+	/******************************************************************/
+	.page-error__info {
+		padding-top: 35px;
+		width: 200px;
+	}
+	.page-error__info:before {
+		width: 225px;
+	}
+	.page-error__info p {
+		font-size: 16px;
+	}
+	.page-error__info .btn {
+		width: 200px;
+	}
+}

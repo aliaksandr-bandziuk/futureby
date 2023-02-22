@@ -1,0 +1,65 @@
+/**********************************************************************/
+/**********************************************************************/
+.page-author__head {
+	display: flex;
+	margin: 0 auto 30px 0;
+}
+.page-author__head img {
+	width: 80px;
+	border-radius: 10px;
+	margin: 0 25px auto 0;
+}
+.page-author__name {
+	margin: auto 0;
+	font-family: "KB Astrolyte", sans-serif;
+	font-size: 40px;
+	line-height: 100%;
+	color: #FFFFFF;
+}
+
+/**********************************************************************/
+.page-author .tabs__item {
+	width: 50%;
+}
+
+/**********************************************************************/
+.page-author .grid__filter-wrap {
+	margin-left: auto;
+	margin-right: 0;
+}
+.page-author .grid__filter p {
+	width: 150px;
+}
+
+
+
+/**********************************************************************/
+/*********************         RESPONSIVE         *********************/
+/**********************************************************************/
+@media screen and (max-width: 1440px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-author__head img {
+		width: 70px;
+		margin-right: 20px;
+	}
+	.page-author__name {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/******************************************************************/
+	/******************************************************************/
+	.page-author .tabs__item span {
+		padding: 15px 0;
+	}
+	
+	/******************************************************************/
+	.page-author .grid__filter-wrap {
+		margin-right: auto;
+	}
+	.page-author .grid__filter p {
+		width: 120px;
+	}
+}
